@@ -1,0 +1,17 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: prod //spring默认配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: mall
+    url: jdbc:mysql://127.0.0.1:3306/mall?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: c9e734f66053a158
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false 

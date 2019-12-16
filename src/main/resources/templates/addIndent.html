@@ -1,0 +1,41 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html">
+    <title>后台管理空间</title>
+    <link rel="icon" href="images/fac.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/planner.css"/>
+</head>
+<body>
+    <p id="p1">My Mall</p>
+	<div id="d1">
+		<br>
+		<p align="center">添加订单（请添加存在的商品）</p>
+		<br>
+		<form action="addIndent" method="post">
+			<table id="t1">
+		        <tr>
+				    <td>商品名称</td>
+			        <td>数量</td>
+				    <td>总价</td>
+				    <td>订单状态</td>
+				    <td>收货地址</td>
+		        </tr>
+		        <tr>
+				    <td><input type="text" name="aname" placeholder="如：KD11 超级战靴"></td>
+				    <td><input type="text" name="aamount" placeholder="如：1"></td>
+				    <td><input type="text" name="atotal" placeholder="如：1289"></td>
+				    <td><input type="text" name="astate" placeholder="如：待发货"></td>
+				    <td><input type="text" name="aaddr" placeholder="如：广州"></td>
+		        </tr>
+	        </table>
+	        <button type="submit">添加</button>
+		</form>
+		<br>
+	</div>
+
+</body>
+</html>

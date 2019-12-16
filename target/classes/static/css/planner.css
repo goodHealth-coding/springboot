@@ -1,0 +1,65 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/bg.jpeg);
+	background-size: 100% 100%
+}
+#p1{
+	text-align: center;
+	font-size: 40px;
+	font-family: STCaiyun
+}
+#d1{
+	width: 80%;
+	display: table;
+	margin-left: 10%;
+	border-radius: 20px;
+	border: 2px solid #c0c0c0
+}
+#d2{
+	width: 70%;
+	display: table;
+	margin-left: 15%;
+	border-radius: 20px;
+	border: 2px solid #c0c0c0
+}
+#t1{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 10px
+}
+#t2{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 10px
+}
+#t1 td{
+	width: 20%;
+	text-align: center
+}
+#t2 td{
+	width: 50%;
+	text-align: center;
+}
+form{
+	text-align: center;
+}
+#sp1{
+	font-size: 12px;
+	float: right;
+}
+button {
+	width: 130px;
+	height: 26px;
+	border-width: 0px;
+	border-radius: 3px;
+	background: #F8F8F8;
+	cursor: pointer;
+	outline: none;
+	font-family: Microsoft YaHei;
+	color: black;
+	font-size: 14px;
+}
+button:hover {
+	background: #7DC3EA;
+}

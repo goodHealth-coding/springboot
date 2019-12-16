@@ -1,0 +1,57 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html">
+    <title>后台管理空间</title>
+    <link rel="icon" href="images/fac.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/administrator.css"/>
+</head>
+<body>
+    <br>
+    <form action="goods" method="post"><button type="submit">商品详情</button></form>
+    <br>
+	<div id="d1">
+		<br>
+		<p id="p1">订单详情</p>
+		<br>
+		<table id="t1">
+		    <tr>
+				<td>订单id</td>
+			    <td>商品名称</td>
+				<td>数量</td>
+				<td>总价</td>
+				<td>订单状态</td>
+				<td>收货地址</td>
+				<td>
+				    <form action="to.addIndent" method="post">
+				        <button type="submit">增加</button>
+				    </form>
+				</td>
+		    </tr>
+		    <tr th:each="indent : ${ilist}">
+		        <td th:text="${indent.id}"></td>
+		        <td th:text="${indent.goodname}"></td>
+		        <td th:text="${indent.amount}"></td>
+		        <td th:text="${indent.totalcost}"></td>
+		        <td th:text="${indent.state}"></td>
+		        <td th:text="${indent.addr}"></td>
+		        <td>
+		            <button th:onclick="deleteIndent('[[${indent.id}]]')">删除</button>
+		        </td>
+		    </tr>
+	    </table>
+	    <form action="tologin.action"><button type="submit">注销</button></form>
+	    <br>
+	</div>
+<script>
+function deleteIndent(a){
+	var url = "/deIndent?id="+a;
+	url = url.replace(/\"/g, "");
+	window.location=url;
+}
+</script>
+</body>
+</html>

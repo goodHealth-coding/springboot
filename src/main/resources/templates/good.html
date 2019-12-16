@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="content-type" content="text/html">
+    <title>后台管理空间</title>
+    <link rel="icon" href="images/fac.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/administrator.css"/>
+</head>
+<body>
+    <p id="p1">在售商品</p>
+	<div id="d2">
+		<br>
+		<p id="p1">商品详情</p>
+		<br>
+		<table id="t2">
+		    <tr>
+				<td>商品id</td>
+			    <td>商品名称</td>
+				<td>单价</td>
+				<td>
+				    <form action="to.addGood" method="post">
+				        <button type="submit">增加</button>
+				    </form>
+				</td>
+		    </tr>
+		    <tr th:each="good : ${glist}">
+		        <td th:text="${good.id}"></td>
+		        <td th:text="${good.goodname}"></td>
+		        <td th:text="${good.price}"></td>
+		        <td>
+		            <button th:onclick="deleteGood('[[${good.id}]]')">删除</button>
+		        </td>
+		    </tr>
+	    </table>
+	</div>
+<script>
+function deleteGood(a){
+	var url = "/deGood?id="+a;
+	url = url.replace(/\"/g, "");
+	window.location=url;
+}
+</script>
+</body>
+</html>
